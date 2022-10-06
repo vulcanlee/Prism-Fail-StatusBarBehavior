@@ -1,6 +1,16 @@
 # Prism.Maui cannot work with ComminityToolkit's StatusBarBehavior
 
-Today, I see this [Announcing the .NET MAUI Community Toolkit v1.3](https://devblogs.microsoft.com/dotnet/announcing-the-dotnet-maui-community-toolkit-v13/) blog, then I create a MAUI Project by Prism.Maui Template and upgrade Prism.DryIoc.Maui
+Today, I see this [Announcing the .NET MAUI Community Toolkit v1.3](https://devblogs.microsoft.com/dotnet/announcing-the-dotnet-maui-community-toolkit-v13/) blog, then I create a MAUI Project by Prism.Maui Template and upgrade Prism.DryIoc.Maui to version 8.1.273-pre.
+
+I set this `<toolkit:StatusBarBehavior StatusBarColor="Fuchsia" StatusBarStyle="LightContent" />` on `<ContentPage.Behaviors>...</ContentPage.Behaviors>` and run this project on Android Emulator.
+
+I got exception : System.NotImplementedException: 'Either set MainPage or override CreateWindow.'
+
+But when I use default .NET MAUI project template and create a project, also add `<toolkit:StatusBarBehavior StatusBarColor="Fuchsia" StatusBarStyle="LightContent" />` on `<ContentPage.Behaviors>...</ContentPage.Behaviors>` and run this project on Android Emulator, awesome, it is working fine.
+
+How can I use ComminityToolkit's StatusBarBehavior on Prism.Maui project and have no exception? 
+
+The following reproduce projects are on [https://github.com/vulcanlee/Prism-Fail-StatusBarBehavior](https://github.com/vulcanlee/Prism-Fail-StatusBarBehavior)
 
 ## Using Maui Template to create App and can work with StatusBarBehavior
 
